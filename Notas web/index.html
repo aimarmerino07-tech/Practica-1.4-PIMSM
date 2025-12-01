@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tus Notas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>Tus Notas</header>
+
+    <div class="container">
+        <h2>Crear nueva nota</h2>
+        <input type="text" id="titulo" placeholder="Título de la nota">
+        <textarea id="contenido" placeholder="Contenido de la nota" rows="4"></textarea>
+
+        <label>Prioridad:</label>
+        <select id="prioridad">
+            <option value="alta">Alta</option>
+            <option value="media" selected>Media</option>
+            <option value="baja">Baja</option>
+        </select>
+
+        <button onclick="agregarNota()">Guardar Nota</button>
+
+        <h2>Notas guardadas</h2>
+
+        <div class="filtro">
+            <label>Filtrar por prioridad:</label>
+            <select id="filtro" onchange="mostrarNotas()">
+                <option value="todas">Todas</option>
+                <option value="alta">Alta</option>
+                <option value="media">Media</option>
+                <option value="baja">Baja</option>
+            </select>
+        </div>
+
+        <div id="listaNotas"></div>
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
